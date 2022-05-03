@@ -13,6 +13,11 @@ code {
     monospace;
 } 
 
+.Navbar {
+  height: 300px;
+  background-color: aqua;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
