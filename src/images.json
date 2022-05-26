@@ -1,5 +1,46 @@
 [
     {   
+        "src": "new_la_function_images/lafunc51410.jpg",
+        "alt": "LA Function"
+    },
+    {   
+        "src": "new_la_function_images/lafunc5146.jpg",
+        "alt": "LA Function"
+    },
+    {   
+        "src": "new_la_function_images/lafunc5149.jpg",
+        "alt": "Blue Bucks Clan performing at LA Function"
+    },
+    {   
+        "src": "new_la_function_images/lafunc5148.jpg",
+        "alt": "Dj Nitrane and DJ Bad at LA Function"
+    },
+    {   
+        "src": "new_la_function_images/lafunc5147.jpg",
+        "alt": "Jessica Killings at LA Function"
+    },
+    {   
+        "src": "new_la_function_images/lafunc5145.jpg",
+        "alt": "Blue Bucks Clan at LA Function"
+    },
+    {   
+        "src": "new_la_function_images/lafunc5144.jpg",
+        "alt": "LA Function"
+    },
+    {   
+        "src": "new_la_function_images/lafunc5143.jpg",
+        "alt": "Rapper the Game at LA Function"
+    },
+    {   
+        "src": "new_la_function_images/lafunc5142.jpg",
+        "alt": "LA Function"
+    },
+    {   
+        "src": "new_la_function_images/lafunc5141.jpg",
+        "alt": "DJ Battle Cat at LA Function"
+    },
+   
+    {   
         "src": "new_la_function_images/image0 2.JPEG",
         "alt": "Eric Bellinger at LA Function"
     },
@@ -125,10 +166,7 @@
     {   
         "src": "https://la-function-website.s3.us-west-1.amazonaws.com/la-function-website-images/lafunction35.jpeg",
         "alt": "Yung Berg at LA function"
-    },
-    {   
-        "src": "new_la_function_images/image10 2.JPEG",
-        "alt": "LA Function Day Party"
     }
+   
 
 ]
