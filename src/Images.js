@@ -87,8 +87,9 @@ function Lightbox({ currentIndex, onClose, onPrev, onNext }) {
 
   // Pause video when navigating away
   useEffect(() => {
+    const videoElement = videoRef.current;
     return () => {
-      if (videoRef.current) videoRef.current.pause();
+      if (videoElement) videoElement.pause();
     };
   }, [currentIndex]);
 
