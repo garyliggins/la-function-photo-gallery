@@ -1,23 +1,616 @@
- body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} 
-
-.Navbar {
-  height: 300px;
-  background-color: aqua;
-}
+/* ============================================================
+   LA FUNCTION GALLERY — SUMMER THEME
+   ============================================================ */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ===== Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0d0d0d; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF6B35, #FFD700);
+  border-radius: 4px;
+}
+
+/* ============================================================
+   KEYFRAME ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmerText {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes orbFloat {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  33%  { transform: translate(18px, -22px) scale(1.08); }
+  66%  { transform: translate(-12px, 8px) scale(0.93); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(255, 107, 53, 0.35); box-shadow: 0 0 8px rgba(255,107,53,0.15); }
+  50%       { border-color: rgba(255, 215, 0, 0.65);  box-shadow: 0 0 16px rgba(255,215,0,0.25); }
+}
+
+@keyframes sunPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.04); }
+}
+
+@keyframes waveRock {
+  0%, 100% { transform: rotate(-2deg); }
+  50%       { transform: rotate(2deg); }
+}
+
+/* ============================================================
+   PAGE BACKGROUND
+   ============================================================ */
+
+.page-bg {
+  background: #0d0d0d;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Subtle warm ambient light overlay */
+.page-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 5% 15%,  rgba(255, 69, 0, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 95% 85%, rgba(255, 165, 0, 0.06) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+
+.la-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-main {
+  background: linear-gradient(135deg,
+    #1a0500 0%,
+    #2d0d00 20%,
+    #5c2200 45%,
+    #c23d00 70%,
+    #FF4500 85%,
+    #FF6B35 100%
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 9s ease infinite;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glowing orbs inside navbar */
+.navbar-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(55px);
+  pointer-events: none;
+  animation: orbFloat 9s ease-in-out infinite;
+}
+
+.navbar-orb-1 {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.35) 0%, transparent 70%);
+  top: -90px;
+  right: 18%;
+}
+
+.navbar-orb-2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 69, 0, 0.4) 0%, transparent 70%);
+  bottom: -70px;
+  left: 28%;
+  animation-direction: reverse;
+  animation-duration: 11s;
+}
+
+.navbar-logo-link {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-block;
+}
+.navbar-logo-link:hover { transform: scale(1.08) rotate(-2deg); }
+
+.navbar-logo {
+  width: 52px;
+  filter: invert(1) drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navbar-logo { width: 68px; }
+  .navbar-main  { padding: 18px 40px; }
+}
+
+.navbar-title-group {
+  position: relative;
+  z-index: 1;
+  text-align: right;
+}
+
+.navbar-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+  line-height: 1;
+  text-shadow:
+    0 0 24px rgba(255, 215, 0, 0.55),
+    2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .navbar-title { font-size: 2.4rem; }
+}
+
+.navbar-subtitle {
+  font-size: 0.6rem;
+  color: rgba(255, 215, 0, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 5px 0 0;
+  font-weight: 600;
+}
+
+/* Marquee ticker */
+.navbar-marquee {
+  background: linear-gradient(90deg,
+    #c23d00 0%,
+    #FF4500 20%,
+    #FF6B35 40%,
+    #FFD700 60%,
+    #FF6B35 80%,
+    #c23d00 100%
+  );
+  background-size: 200% 100%;
+  animation: gradientShift 5s linear infinite;
+  padding: 8px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-item {
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+
+.marquee-sep {
+  color: rgba(255, 255, 255, 0.45);
+  padding: 0 4px;
+}
+
+/* ============================================================
+   HERO / INTRO
+   ============================================================ */
+
+.gallery-hero {
+  text-align: center;
+  padding: 64px 20px 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 107, 53, 0.12);
+  border: 1px solid rgba(255, 107, 53, 0.45);
+  color: #FF6B35;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  padding: 6px 22px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+  animation: fadeIn 0.7s ease both, borderGlow 3.5s ease infinite;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  font-weight: 900;
+  font-style: italic;
+  background: linear-gradient(135deg,
+    #FF6B35 0%,
+    #FFD700 35%,
+    #FF9500 55%,
+    #FF4500 80%,
+    #FFD700 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerText 4.5s linear infinite, fadeInUp 0.8s ease 0.1s both;
+  margin: 0 0 14px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  margin: 0;
+  animation: fadeInUp 0.8s ease 0.25s both;
+}
+
+.hero-divider {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF6B35, #FFD700, #FF6B35);
+  border-radius: 2px;
+  margin: 24px auto 0;
+  animation: fadeIn 0.8s ease 0.4s both, shimmerText 3s linear infinite;
+  background-size: 200% auto;
+}
+
+/* ============================================================
+   GALLERY CONTAINER
+   ============================================================ */
+
+.gallery-wrapper {
+  padding: 44px 14px 90px;
+  max-width: 1450px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Masonry columns layout */
+.masonry-grid {
+  columns: 1;
+  column-gap: 12px;
+}
+
+@media (min-width: 580px) {
+  .masonry-grid {
+    columns: 2;
+    column-gap: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    columns: 3;
+    column-gap: 14px;
+  }
+}
+
+/* ============================================================
+   GALLERY CARDS
+   ============================================================ */
+
+.gallery-card {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  opacity: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  /* GPU layer for smooth animation */
+  will-change: transform, opacity;
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease;
+  background: #1a1a1a;
+}
+
+.gallery-card.is-visible {
+  animation: fadeInUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow:
+    0 26px 70px rgba(255, 107, 53, 0.38),
+    0 0 0 1px rgba(255, 215, 0, 0.28),
+    inset 0 0 0 1px rgba(255, 107, 53, 0.18);
+  z-index: 10;
+}
+
+/* Image wrapper keeps overflow hidden for zoom */
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  line-height: 0;
+}
+
+.gallery-img {
+  width: 100%;
+  display: block;
+  transition:
+    transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    filter 0.4s ease;
+  filter: brightness(0.88) saturate(1.15);
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.09);
+  filter: brightness(1.06) saturate(1.35) contrast(1.04);
+}
+
+/* Bottom gradient overlay with artist name */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(160, 35, 0, 0.92) 0%,
+    rgba(255, 107, 53, 0.55) 30%,
+    rgba(255, 107, 53, 0.08) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px 16px;
+}
+
+.gallery-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.overlay-label {
+  color: rgba(255, 215, 0, 0.7);
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin: 0 0 3px;
+  transform: translateY(10px);
+  transition: transform 0.4s ease 0.05s;
+}
+
+.overlay-text {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.35;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+  transform: translateY(10px);
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .overlay-label,
+.gallery-card:hover .overlay-text {
+  transform: translateY(0);
+}
+
+/* Expand icon top-right */
+.overlay-expand {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  opacity: 0;
+  transform: scale(0.75);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.gallery-card:hover .overlay-expand {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.25s ease;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 92vw;
+  max-height: 92vh;
+  position: relative;
+}
+
+.lightbox-counter {
+  color: rgba(255, 107, 53, 0.85);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow:
+    0 0 120px rgba(255, 107, 53, 0.18),
+    0 50px 100px rgba(0, 0, 0, 0.85);
+  animation: fadeInUp 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+  display: block;
+}
+
+.lightbox-caption {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.82rem;
+  margin: 14px 0 0;
+  letter-spacing: 0.06em;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* Lightbox buttons */
+.lb-btn {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.lb-btn:hover {
+  background: rgba(255, 107, 53, 0.65);
+  border-color: #FF6B35;
+}
+
+.lb-close {
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lb-close:hover { transform: scale(1.12) rotate(90deg); }
+
+.lb-prev,
+.lb-next {
+  top: 50%;
+  width: 54px;
+  height: 54px;
+  font-size: 1.6rem;
+  transform: translateY(-50%);
+}
+
+.lb-prev { left: 14px; }
+.lb-next { right: 14px; }
+
+.lb-prev:hover { transform: translateY(-50%) scale(1.12); }
+.lb-next:hover { transform: translateY(-50%) scale(1.12); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.gallery-footer {
+  text-align: center;
+  padding: 22px 20px;
+  border-top: 1px solid rgba(255, 107, 53, 0.14);
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-footer a {
+  color: #FF6B35;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.gallery-footer a:hover {
+  color: #FFD700;
+}
