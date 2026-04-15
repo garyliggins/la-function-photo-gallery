@@ -55,6 +55,10 @@ function GalleryCard({ image, index, onOpen }) {
             preload="metadata"
             muted
             playsInline
+            poster={image.poster}
+            onLoadedMetadata={(e) => {
+              if (!image.poster) e.target.currentTime = 0.1;
+            }}
           />
         ) : (
           <img
