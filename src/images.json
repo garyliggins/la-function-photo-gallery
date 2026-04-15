@@ -1,172 +1,386 @@
 [
-    {   
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20YG%2008.16.25.MP4",
+        "alt": "YG at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20YG%20Left%20Right%2008.16.25.MP4",
+        "alt": "YG at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_6621.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_6091.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_6093.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20Larry%20June%2007.19.25.MP4",
+        "alt": "Larry June at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20Larry%20June%2007.19.25%20solo.MP4",
+        "alt": "Larry June at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_5942%202.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_4394.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_4395.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20X%20Omarion%2006.21.25%20v1.MP4",
+        "alt": "Omarion at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20Omarion%2006.21.25%20v2.MP4",
+        "alt": "Omarion at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20DJ%20Bad%2006.21.25%20R%26B.MP4",
+        "alt": "DJ Bad at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_4389%202.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_4391.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_4245.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20310babii%2005.17.25.MP4",
+        "alt": "310babii at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20DJ%20Quik%2005.17.25.MP4",
+        "alt": "DJ Quik at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20Xzibit%2005.17.25.MP4",
+        "alt": "Xzibit at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/LAF%20x%20Chefboy%2005.17.25.MP4",
+        "alt": "Chef Boy at LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro-12.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro-17.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro-33.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro-59.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro-81.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro-84.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro-84%202.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro-9.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro-9%202.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro143.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/capturedbycastro256.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/BB4A5996.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/BB4A5996%202.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/BB4A6061.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/BB4A6061%202.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/BB4A6123.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/BB4A6123%202.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/BB4A6255.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/BB4A6297.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/BB4A6362.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/DSCF7176.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_1041.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_1506.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_1507.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_1509.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_1517.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_1578.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_1589.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_2694.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_2695.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_2764.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_2777.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_4070.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/IMG_4074.JPG",
+        "alt": "LA Function"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/EE535424-F43C-45F8-BFE8-71E9E6FDBD3F.MP4",
+        "alt": "LA Function",
+        "type": "video"
+    },
+    {
+        "src": "https://lafunction-bucket.s3.us-east-2.amazonaws.com/photo%20aug%2019%202023%2C%205%2046%2055%20pm.JPG",
+        "alt": "LA Function"
+    },
+    {
         "src": "new_la_function_images/lafunc51410.jpg",
         "alt": "LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/lafunc5146.jpg",
         "alt": "LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/lafunc5149.jpg",
         "alt": "Blue Bucks Clan performing at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/lafunc5148.jpg",
         "alt": "Dj Nitrane and DJ Bad at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/lafunc5147.jpg",
         "alt": "Jessica Killings at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/lafunc5145.jpg",
         "alt": "Blue Bucks Clan at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/lafunc5144.jpg",
         "alt": "LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/lafunc5143.jpg",
         "alt": "Rapper the Game at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/lafunc5142.jpg",
         "alt": "LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/lafunc5141.jpg",
         "alt": "DJ Battle Cat at LA Function"
     },
-   
-    {   
+    {
         "src": "new_la_function_images/image0 2.JPEG",
         "alt": "Eric Bellinger at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/image0.JPEG",
         "alt": "Blxst at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/image1 2.JPEG",
         "alt": "P-Lo at La Function"
     },
-    {   
+    {
         "src": "new_la_function_images/image1.jpeg",
         "alt": "YG at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/image2 2.JPEG",
         "alt": "Paloma Ford at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/image2.JPEG",
         "alt": "Ty Dolla Sign and Joe Moses at LA Function"
     },
-    {   
-        "src": "new_la_function_images/image3 2.JPEG"
-        ,
+    {
+        "src": "new_la_function_images/image3 2.JPEG",
         "alt": "Tinashe at LA Function"
     },
-    
-    {   
-        "src": "new_la_function_images/image3.JPEG"
-        ,
-        "alt": "Dom Kennedy and jay 305 at LA Function "
+    {
+        "src": "new_la_function_images/image3.JPEG",
+        "alt": "Dom Kennedy and jay 305 at LA Function"
     },
-    
-    {   
+    {
         "src": "new_la_function_images/image4 2.JPEG",
         "alt": "Draya Michele at LA Function"
     },
-   
-    {   
+    {
         "src": "new_la_function_images/image4.JPEG",
         "alt": "The Game at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/image13.JPEG",
         "alt": "India Love at LA Function"
     },
-   
-    {   
+    {
         "src": "new_la_function_images/image5 2.JPEG",
         "alt": "Ashley Austin MC at LA Function"
     },
-    
-    {   
+    {
         "src": "new_la_function_images/image5.JPEG",
         "alt": "Kurupt at La Function"
     },
-    
-    {   
+    {
         "src": "new_la_function_images/image6.JPEG",
         "alt": "Joe Moses at LA Function"
     },
-    
-    {   
+    {
         "src": "new_la_function_images/image7 2.JPEG",
         "alt": "LA Function DJs"
     },
-    
-    {   
+    {
         "src": "new_la_function_images/image7.JPEG",
         "alt": "RJ at LA Function"
     },
-    
-    {   
+    {
         "src": "new_la_function_images/image9 2.JPEG",
         "alt": "LA Function day party"
     },
-   
-    {   
+    {
         "src": "new_la_function_images/image9.JPEG",
         "alt": "Dom Kennedy at LA Function"
     },
-    
-   
-    
-    {   
+    {
         "src": "new_la_function_images/image10.JPEG",
         "alt": "Wale at LA function"
     },
-  
-    {   
+    {
         "src": "new_la_function_images/image11 2.JPEG",
         "alt": "DJs at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/image11.JPEG",
         "alt": "OT Genasis and AD at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/image12 2.JPEG",
         "alt": "la function day party"
     },
-    {   
+    {
         "src": "new_la_function_images/image12.JPEG",
         "alt": "J rock, Big Boy, J cruz at LA Function"
     },
-   
-    {   
+    {
         "src": "new_la_function_images/image14.JPEG",
         "alt": "Ty Dolla Sign at LA Function"
     },
-    {   
+    {
         "src": "new_la_function_images/image15.JPEG",
         "alt": "lafunction image"
     },
-    
-    {   
+    {
         "src": "https://la-function-website.s3.us-west-1.amazonaws.com/la-function-website-images/lafunction32.jpeg",
         "alt": "lafunction image"
     },
-    
-    {   
+    {
         "src": "https://la-function-website.s3.us-west-1.amazonaws.com/la-function-website-images/lafunction35.jpeg",
         "alt": "Yung Berg at LA function"
     }
-   
-
 ]

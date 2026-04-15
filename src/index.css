@@ -484,6 +484,42 @@ body {
 }
 
 /* ============================================================
+   VIDEO PLAY BADGE
+   ============================================================ */
+
+.video-play-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  background: rgba(0, 0, 0, 0.62);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  border: 2px solid rgba(255, 215, 0, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background 0.3s ease,
+    border-color 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+  padding-left: 3px; /* optical center for ▶ */
+}
+
+.gallery-card:hover .video-play-badge {
+  background: rgba(255, 107, 53, 0.85);
+  border-color: #FFD700;
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+/* ============================================================
    LIGHTBOX
    ============================================================ */
 

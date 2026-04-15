@@ -34,6 +34,7 @@ function GalleryCard({ image, index, onOpen }) {
   const [ref, visible] = useVisible();
   // Stagger delay: 9 tiers × 80ms = 0–640ms
   const delay = `${(index % 9) * 0.08}s`;
+  const isVideo = image.type === "video";
 
   return (
     <article
@@ -43,17 +44,30 @@ function GalleryCard({ image, index, onOpen }) {
       onClick={() => onOpen(index)}
       role="button"
       tabIndex={0}
-      aria-label={`View photo: ${image.alt}`}
+      aria-label={`View ${isVideo ? "video" : "photo"}: ${image.alt}`}
       onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onOpen(index)}
     >
       <div className="card-img-wrapper">
-        <img
-          className="gallery-img"
-          src={image.src}
-          alt={image.alt}
-          loading="lazy"
-          decoding="async"
-        />
+        {isVideo ? (
+          <video
+            className="gallery-img"
+            src={image.src}
+            preload="metadata"
+            muted
+            playsInline
+          />
+        ) : (
+          <img
+            className="gallery-img"
+            src={image.src}
+            alt={image.alt}
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+        {isVideo && (
+          <div className="video-play-badge" aria-hidden="true">▶</div>
+        )}
         <div className="card-overlay" aria-hidden="true">
           <div className="overlay-expand">⤢</div>
           <p className="overlay-label">LA Function</p>
@@ -66,8 +80,17 @@ function GalleryCard({ image, index, onOpen }) {
 
 /* ─── Lightbox ───────────────────────────────────────────── */
 function Lightbox({ currentIndex, onClose, onPrev, onNext }) {
-  const image = images[currentIndex];
+  const item = images[currentIndex];
+  const isVideo = item.type === "video";
   const total = images.length;
+  const videoRef = useRef(null);
+
+  // Pause video when navigating away
+  useEffect(() => {
+    return () => {
+      if (videoRef.current) videoRef.current.pause();
+    };
+  }, [currentIndex]);
 
   // Keyboard navigation
   const handleKey = useCallback(
@@ -114,7 +137,7 @@ function Lightbox({ currentIndex, onClose, onPrev, onNext }) {
         ‹
       </button>
 
-      {/* Image content */}
+      {/* Media content */}
       <div
         className="lightbox-inner"
         onClick={(e) => e.stopPropagation()}
@@ -122,13 +145,25 @@ function Lightbox({ currentIndex, onClose, onPrev, onNext }) {
         <p className="lightbox-counter">
           {currentIndex + 1} / {total}
         </p>
-        <img
-          key={currentIndex}        /* force remount → re-triggers animation */
-          className="lightbox-image"
-          src={image.src}
-          alt={image.alt}
-        />
-        <p className="lightbox-caption">{image.alt}</p>
+        {isVideo ? (
+          <video
+            ref={videoRef}
+            key={currentIndex}
+            className="lightbox-image"
+            src={item.src}
+            controls
+            autoPlay
+            playsInline
+          />
+        ) : (
+          <img
+            key={currentIndex}        /* force remount → re-triggers animation */
+            className="lightbox-image"
+            src={item.src}
+            alt={item.alt}
+          />
+        )}
+        <p className="lightbox-caption">{item.alt}</p>
       </div>
 
       {/* Next */}
